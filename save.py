@@ -6,7 +6,7 @@ import cv2
 cap = cv2.VideoCapture(0)
 
 # Define the codec and create VideoWriter object
-fourcc = cv2.cv.CV_FOURCC('m', 'p', '4', 'v')
+fourcc = cv2.VideoWriter_fourcc('m', 'p', '4', 'v')
 out = cv2.VideoWriter('output.avi',fourcc, 10.0, (640,480))
 
 while(cap.isOpened()):
@@ -38,7 +38,7 @@ out.release()
 cap2 = cv2.VideoCapture('output.avi')
 ip = cv2.imread('ip3.jpg',0)
 h,w = ip.shape[:2]
-fourcc = cv2.cv.CV_FOURCC('m', 'p', '4', 'v')
+fourcc = cv2.VideoWriter_fourcc('m', 'p', '4', 'v')
 out2 = cv2.VideoWriter('outprocessed.avi',fourcc, 10.0, (640,480))
 
 while(cap2.isOpened()):
